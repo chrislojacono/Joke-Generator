@@ -7,7 +7,7 @@ const viewTheJoke = () => {
     $('#jokeArea').html('');
     getJoke.getAJoke().then((response) => {
       console.warn(response);
-      $('#jokeArea').html(`<div class="card" style="width: 18rem;">
+      $('#jokeArea').html(`<div class="card mx-auto" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Random Joke!</h5>
           <p class="card-text">${response.data.setup}</p>
@@ -16,7 +16,7 @@ const viewTheJoke = () => {
         </div>
       </div>`);
       $('#punchline').on('click', () => {
-        $('#punchlineArea').append(`<p class="card-text">${response.data.punchline}</p>`);
+        $('#punchlineArea').append(`<h4 class="m-md">${response.data.punchline}</h4>`);
       });
     });
   });
