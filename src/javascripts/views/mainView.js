@@ -9,7 +9,6 @@ const viewTheJoke = () => {
       console.warn(response);
       $('#jokeArea').html(`<div class="card mx-auto" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Random Joke!</h5>
           <p class="card-text">${response.data.setup}</p>
           <a href="#" id="punchline" class="btn btn-primary">Click for Punchline</a>
           <div id="punchlineArea"></div>
